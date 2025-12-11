@@ -31,7 +31,6 @@
 	},
 	"data": {
 		"bytecode": {
-			"functionDebugData": {},
 			"generatedSources": [],
 			"linkReferences": {},
 			"object": "",
@@ -39,7 +38,6 @@
 			"sourceMap": ""
 		},
 		"deployedBytecode": {
-			"functionDebugData": {},
 			"generatedSources": [],
 			"immutableReferences": {},
 			"linkReferences": {},
@@ -49,7 +47,7 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"allowance(address,uint256)": "ddc6a171",
+			"allowance(address,address)": "dd62ed3e",
 			"approve(address,uint256)": "095ea7b3",
 			"balanceOf(address)": "70a08231",
 			"totalSupply()": "18160ddd",
@@ -93,6 +91,25 @@
 					"type": "address"
 				},
 				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				}
+			],
+			"name": "Burn",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "from",
+					"type": "address"
+				},
+				{
 					"indexed": true,
 					"internalType": "address",
 					"name": "to",
@@ -112,13 +129,13 @@
 			"inputs": [
 				{
 					"internalType": "address",
-					"name": "owner",
+					"name": "_owner",
 					"type": "address"
 				},
 				{
-					"internalType": "uint256",
-					"name": "amount",
-					"type": "uint256"
+					"internalType": "address",
+					"name": "spender",
+					"type": "address"
 				}
 			],
 			"name": "allowance",
@@ -129,7 +146,7 @@
 					"type": "uint256"
 				}
 			],
-			"stateMutability": "nonpayable",
+			"stateMutability": "view",
 			"type": "function"
 		},
 		{

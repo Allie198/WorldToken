@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.2+commit.661d1103"
 	},
 	"language": "Solidity",
 	"output": {
@@ -40,6 +40,25 @@
 						"type": "address"
 					},
 					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Burn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
 						"indexed": true,
 						"internalType": "address",
 						"name": "to",
@@ -59,13 +78,13 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "_owner",
 						"type": "address"
 					},
 					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
 					}
 				],
 				"name": "allowance",
@@ -76,7 +95,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -204,7 +223,7 @@
 		"compilationTarget": {
 			"IERC20.sol": "IERC20"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -217,11 +236,11 @@
 	},
 	"sources": {
 		"IERC20.sol": {
-			"keccak256": "0xd6610debe75e3cd75baacc20f13bd7de99991d1be4b3b59f1ecb6c250c2ac1ca",
+			"keccak256": "0xb89b28cc8c49ff1cfd5acde0f1abbc1c01938ec34fea40930e509d1cc4be367e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://992cfd90d5bfd9c193bcc0036b92e9dcb7ee9b802d41bc4d8572e57b24216a12",
-				"dweb:/ipfs/QmYyVv9AtpbGahVfrkwbPqPfPnep9avAnipXG778hpcA6H"
+				"bzz-raw://e9050f294b86dd222094c04ae9a50de1f63ba17cef9dc0eab54070b41144259a",
+				"dweb:/ipfs/QmW5yz5J3mhxKRHxDMfUET1J2Mgf2x7MZRE8ZvvYTnWvQU"
 			]
 		}
 	},

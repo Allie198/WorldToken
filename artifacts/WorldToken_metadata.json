@@ -1,10 +1,15 @@
 {
 	"compiler": {
-		"version": "0.8.31+commit.fd3a2265"
+		"version": "0.8.2+commit.661d1103"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
 			{
 				"anonymous": false,
 				"inputs": [
@@ -78,7 +83,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "_owner",
 						"type": "address"
 					},
 					{
@@ -96,30 +101,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "allowance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -166,24 +147,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "burn",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -194,24 +157,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -335,7 +280,7 @@
 		"compilationTarget": {
 			"WorldToken.sol": "WorldToken"
 		},
-		"evmVersion": "osaka",
+		"evmVersion": "istanbul",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -348,19 +293,19 @@
 	},
 	"sources": {
 		"IERC20.sol": {
-			"keccak256": "0x82c5df861f2eae24c616afb3fb85188149f4c98e5f54300ac3f78b600776c240",
+			"keccak256": "0xb89b28cc8c49ff1cfd5acde0f1abbc1c01938ec34fea40930e509d1cc4be367e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7561074ef93fa103365ea0f92292580df477a395ba25d1d8d38ca23702c9cc12",
-				"dweb:/ipfs/QmUuR7EUrESarjAyKPff7PpqMVmmPZZ4MwS9XPrFQFraeW"
+				"bzz-raw://e9050f294b86dd222094c04ae9a50de1f63ba17cef9dc0eab54070b41144259a",
+				"dweb:/ipfs/QmW5yz5J3mhxKRHxDMfUET1J2Mgf2x7MZRE8ZvvYTnWvQU"
 			]
 		},
 		"WorldToken.sol": {
-			"keccak256": "0xfb2ba23edf1c1175936e0e252cc47636311698fc9af61c02db1da62f9dd9a5ea",
+			"keccak256": "0x273acbb387f7c5ef8df6ec26e99daa1030d6981ef40234a741c1bec0ac9a7fce",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0c76a4d4dc5c75ed9fe70abcd56f3d028831c5cda9822f3d2e43ca78d3911942",
-				"dweb:/ipfs/QmVfS7WSFm78XG4htN1R2xSKV1K3MVjTGfxrsKHEeL4KQJ"
+				"bzz-raw://7f7b1b73a7d3ee992938c2c15b6ad530717bc4997fe86d673245ba6440c046af",
+				"dweb:/ipfs/QmS9beFYiERumrcAKuRtzS3tmx5zvG3Z8T4A3bf1HjYBoU"
 			]
 		}
 	},
