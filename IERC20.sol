@@ -16,6 +16,8 @@ interface IERC20 {
     //Events
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
+    event Burn(address indexed from, uint256 amount);
+
 }
 
  
