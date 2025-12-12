@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.2+commit.661d1103"
+		"version": "0.8.30+commit.73712a01"
 	},
 	"language": "Solidity",
 	"output": {
@@ -33,25 +33,6 @@
 					}
 				],
 				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Burn",
 				"type": "event"
 			},
 			{
@@ -147,6 +128,24 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -157,6 +156,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -280,7 +297,7 @@
 		"compilationTarget": {
 			"WorldToken.sol": "WorldToken"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "prague",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -293,19 +310,19 @@
 	},
 	"sources": {
 		"IERC20.sol": {
-			"keccak256": "0xb89b28cc8c49ff1cfd5acde0f1abbc1c01938ec34fea40930e509d1cc4be367e",
+			"keccak256": "0x14101882efae33efd4e06b1ece58fa09f9300fa536518b9af328ccf16b2aba61",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e9050f294b86dd222094c04ae9a50de1f63ba17cef9dc0eab54070b41144259a",
-				"dweb:/ipfs/QmW5yz5J3mhxKRHxDMfUET1J2Mgf2x7MZRE8ZvvYTnWvQU"
+				"bzz-raw://80c722cbec0f9187bc71ca50fea3ba587d897ef79c995f6a502d7ec972795c01",
+				"dweb:/ipfs/QmcAwe4S3bj4kcJRefyHQv1jQL6hh7ZrfZA5efqFEjAZF8"
 			]
 		},
 		"WorldToken.sol": {
-			"keccak256": "0x273acbb387f7c5ef8df6ec26e99daa1030d6981ef40234a741c1bec0ac9a7fce",
+			"keccak256": "0xf7b0ae7f5082522fd02a4936be3d216b2fb179f375d657a6c28c62702ca14811",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7f7b1b73a7d3ee992938c2c15b6ad530717bc4997fe86d673245ba6440c046af",
-				"dweb:/ipfs/QmS9beFYiERumrcAKuRtzS3tmx5zvG3Z8T4A3bf1HjYBoU"
+				"bzz-raw://586f4e55b7ea7b84575132689f0541e6b701708644dce40fa92a3791e28c92a6",
+				"dweb:/ipfs/QmPKjcoxeiRLUja4uyZhT937waouULMSJ9VwhW9GGBnUTo"
 			]
 		}
 	},

@@ -9,20 +9,26 @@ contract WorldToken is IERC20 {
     string public           symbol = "WRD";
     uint8  public constant  decimals = 18;
     
-    uint256 private         _totalSupply = 10000;
+    uint256 private         _totalSupply;
+
 
     address public          owner;
+    address public          engine;
 
     mapping (address => uint256)                     private _balances;
     mapping (address => mapping(address => uint256)) private _allowances;
 
     constructor () {
         owner = msg.sender; 
-        _balances[owner] = 10000;
     }
 
     modifier IsOwner() {
-        require(msg.sender == owner, "Only Owner");
+        require(msg.sender == owner, "Unauthorized");
+        _;
+    }
+
+    modifier IsEngine() {
+        require(msg.sender == engine, "Engine only");
         _;
     }
     
@@ -39,13 +45,22 @@ contract WorldToken is IERC20 {
         return true;
     }
 
+    function setEngine(address _engine) external IsOwner {
+        require (_engine != address(0), "Error: Engine cannot be 0");
+        engine = _engine;
+       
+    }
+
+    function renounceOwnership () public IsOwner { 
+        _transferOwnership(address(0));
+    }
         
     function transferFrom(address from, address to, uint256 amount) external override  returns(bool) {
             uint256 currAllowance = _allowances[from][msg.sender];
             
             require (currAllowance >= amount, "Error: Insufficient balance");
             
-            _approve(from, msg.sender, currAllowance);
+            _approve(from, msg.sender, currAllowance - amount);
             _transfer(from, to, amount);
 
             return true;
@@ -73,16 +88,20 @@ contract WorldToken is IERC20 {
     }
 
     function _approve(address _owner, address spender, uint256 amount) internal { 
-            require (owner != address(0), "Error: Owner 0");
+            require (_owner != address(0), "Error: Owner 0");
             require (spender != address(0), "Error: Spender 0");
-            require (_balances[_owner] >= amount, "Error: Insufficient balance on approval");
             
-            _allowances[owner][spender] = amount;
-            emit Approval(owner, spender, amount);
+            _allowances[_owner][spender] = amount;
+            emit Approval(_owner, spender, amount);
 
     }
 
-    function mint (address to, uint256 amount) internal IsOwner { 
+    function _transferOwnership (address newOwner) internal returns(bool) {
+        owner = newOwner;
+        return true;
+    }
+
+    function mint (address to, uint256 amount) external IsEngine { 
         require(to != address(0), "Error: Owner 0");
         
         _totalSupply += amount;
@@ -91,14 +110,13 @@ contract WorldToken is IERC20 {
         emit Transfer(address(0), to, amount);
     }
 
-    function burn (address from, uint256 amount) internal IsOwner { 
-        require(from != address(0));
-        require(_totalSupply >= amount, "");
+    function burn (address from, uint256 amount) external IsEngine { 
+        require (from != address(0));
+        require (_totalSupply >= amount, "");
 
         _totalSupply -= amount;
         _balances[from] -= amount;
 
-        emit Burn(from, amount);
         emit Transfer(from, address(0), amount);
     }
 
