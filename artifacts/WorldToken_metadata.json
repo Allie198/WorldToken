@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.31+commit.fd3a2265"
 	},
 	"language": "Solidity",
 	"output": {
@@ -159,6 +159,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "engine",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -200,6 +213,26 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_engine",
+						"type": "address"
+					}
+				],
+				"name": "setEngine",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -297,7 +330,7 @@
 		"compilationTarget": {
 			"WorldToken.sol": "WorldToken"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -318,11 +351,11 @@
 			]
 		},
 		"WorldToken.sol": {
-			"keccak256": "0xf7b0ae7f5082522fd02a4936be3d216b2fb179f375d657a6c28c62702ca14811",
+			"keccak256": "0x05f5ab1a88cb68bdd7c29a8dd768b033bac0778228e1035945a06f40d88b2237",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://586f4e55b7ea7b84575132689f0541e6b701708644dce40fa92a3791e28c92a6",
-				"dweb:/ipfs/QmPKjcoxeiRLUja4uyZhT937waouULMSJ9VwhW9GGBnUTo"
+				"bzz-raw://4865f5bf0fb9de2855d1987bd041c66961486fbce9432bf8249a131324661610",
+				"dweb:/ipfs/QmYMjN5qyTfL4KgDUUwRpBLiELXTLPLR2BzCGJm5PqfrsQ"
 			]
 		}
 	},
