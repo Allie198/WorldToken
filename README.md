@@ -10,3 +10,5 @@ WLD Token değerini eşit oranlarda Altın ETH ve BTC değerlerinin 20000'e böl
 Projemiz OpenZeppelin gibi dış kütüphanelere hiç bağımlı kalmadan tasarlandı. ERC-20 standartlarına uyumlu bir yapı tasarlamaya çalıştık.
  - WorldToken.sol dosyası, sadece yetkili sistemin para basabildiği bir ERC-20 uyumlu token kontratı olarak çalışıyor. Bu kontrat, temel token işlevlerini basitçe yönetiyor.
  - System.sol ise Oracle entegrasyonuyla birlikte Chainlink üzerinden ETH, BTC ve XAU (Altın) fiyatlarını saniyelik olarak çekip fiyat verilerini sürekli güncelliyoruz.
+
+![Image](https://github.com/user-attachments/assets/e38f9f0c-0777-4d72-8386-bb4d7868704c)
