@@ -6,3 +6,7 @@ Bizim yaratığımız bu token değerini hükümetlerin bastığı kağıt paral
 Aynı zamanda projemiz defi alanına uygun hem riski seven hem de global bir para birimi olarak kullanılabilecek kadar katı bir token yapmak için sert varlıklar standardına uygun olarak geliştirilmiştir.
 
 WLD Token değerini eşit oranlarda Altın ETH ve BTC değerlerinin 20000'e bölünmesiyle alır böylece istikrarı korurken herkes tarafından ulaşılır olmayı da sağlamış olur 
+
+Projemiz OpenZeppelin gibi dış kütüphanelere hiç bağımlı kalmadan tasarlandı. ERC-20 standartlarına uyumlu bir yapı tasarlamaya çalıştık.
+ - WorldToken.sol dosyası, sadece yetkili sistemin para basabildiği bir ERC-20 uyumlu token kontratı olarak çalışıyor. Bu kontrat, temel token işlevlerini basitçe yönetiyor.
+ - System.sol ise Oracle entegrasyonuyla birlikte Chainlink üzerinden ETH, BTC ve XAU (Altın) fiyatlarını saniyelik olarak çekip fiyat verilerini sürekli güncelliyoruz.
