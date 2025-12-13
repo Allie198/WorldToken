@@ -12,3 +12,4 @@ Projemiz OpenZeppelin gibi dış kütüphanelere hiç bağımlı kalmadan tasarl
  - System.sol ise Oracle entegrasyonuyla birlikte Chainlink üzerinden ETH, BTC ve XAU (Altın) fiyatlarını saniyelik olarak çekip fiyat verilerini sürekli güncelliyoruz.
 
 ![Image](https://github.com/user-attachments/assets/e38f9f0c-0777-4d72-8386-bb4d7868704c)
+<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/f7d8042a-f87c-4f61-9277-acdea3d2d8ee" />
